@@ -1,0 +1,31 @@
+git config --global user.name 'Your Name'
+git config --global user.email you@somedomain.com
+
+
+  // to see all of the changes that have occurred in repo
+git status
+git status -s // -s is for "short output"
+  // difference between working copy and the repo, as well as staged commit and the working copy
+git diff
+  // difference between what is in working tree and the latest commit to the repo
+git diff HEAD
+git diff --stat  // --stat: summery of changes
+git diff HEAD --stat
+
+// adding
+git add . // adds all, new and modified
+git add -A // adds newly created files
+git add app // add all files to the index from a single dir (the app dir)
+git add some-file // adds some-file
+
+// commit
+git commit -m "message"
+  // no need for adding before this line; 
+  // takes the most current version of working tree and commits it to the repo
+  // Won't add new, untracked files, only files that are already being tracked:
+git commit -m "message" -a 
+  // no need for adding before this line;
+git commit -m "Refactor to simplify" some-file
+
+
+good link: http://gitref.org/basic/
